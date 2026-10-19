@@ -17,7 +17,7 @@ This repository is a small, fixed evaluation suite for one job: an AI agent that
 |---|---|
 | Rubric | v1 written |
 | Cases | 15 of 15–20 |
-| First baseline run | not yet |
+| First baseline run | done 2026-10-19: Sonnet 5/15 cases, Haiku 3/15 ([details](runs/2026-10-19_baseline.md)) |
 
 ## How a run works
 

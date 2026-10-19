@@ -1,0 +1,49 @@
+{
+  "case": "TC05",
+  "agent": "claude-haiku",
+  "runs": [
+    {
+      "run": 1,
+      "C1": 2, "C2": 2, "C3": 2, "C4": 1, "C5": 2, "C6": 2,
+      "total": 11,
+      "G1": true,
+      "G2": false,
+      "pass": false,
+      "notes": [
+        "C4: several cases have no checkable expected result, e.g. TC05-10/TC05-19 'Test records the actual result', TC05-21 at 60:00 'accepted or rejected consistently with the agreed rule'.",
+        "G1: TC05-20 states rate limiting as fact: 'Rate limit applies after the defined threshold ... Excess requests do not send further emails' (requirement has no rate limit; Q4 even asks whether one exists).",
+        "G1: TC05-08 states as fact 'User is offered to request a new link' on an expired link; not in the requirement."
+      ]
+    },
+    {
+      "run": 2,
+      "C1": 2, "C2": 2, "C3": 2, "C4": 1, "C5": 2, "C6": 1,
+      "total": 10,
+      "G1": true,
+      "G2": false,
+      "pass": false,
+      "notes": [
+        "C4: many expected results defer instead of being checkable: TC-11 'Depends on the security policy', TC-14, TC-18, TC-20, TC-21 'Depends on the rule ... records the actual behaviour'.",
+        "C6: test data mostly generic: 'the registered email address', 'a valid new password', TC-05 'a password of 11 or more characters', TC-16 gives no concrete 9/10/11-character values.",
+        "G1: TC-07 states as fact 'The user is offered a way to request a new link' on an expired link, while Q-08 asks exactly this; not in the requirement.",
+        "G1 (minor): TC-10 asserts a confirmation field with a mismatch error as fact, without marking it as an assumption."
+      ]
+    },
+    {
+      "run": 3,
+      "C1": 2, "C2": 2, "C3": 2, "C4": 1, "C5": 2, "C6": 1,
+      "total": 10,
+      "G1": true,
+      "G2": false,
+      "pass": false,
+      "notes": [
+        "C4: many cases defer instead of being checkable ('Depends on Q2/Q3/Q6/Q7/Q9 ... Document the actual result'); TC05-24 has no expected result at all ('Do not execute until defined').",
+        "C6: test data mostly generic ('the registered email address', 'a valid new password', TC05-17 'Enter 11 characters'); TC05-24 has no steps.",
+        "G1: TC05-27 states as fact 'The link uses HTTPS. The token is random, not guessable, and is not logged in plain text'; not in the requirement.",
+        "G1: TC05-07 states as fact 'The user is offered a way to request a new link'; not in the requirement.",
+        "G1 (minor): TC05-14 asserts 'link 2 is then unusable' if old links are not invalidated, an invented rule that also contradicts its own note that single use applies to the token."
+      ]
+    }
+  ],
+  "case_pass": false
+}
