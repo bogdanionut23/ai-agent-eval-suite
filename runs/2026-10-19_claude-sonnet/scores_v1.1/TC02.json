@@ -1,0 +1,16 @@
+{"case":"TC02","agent":"claude-sonnet","rubric":"v1.1","runs":[
+{"run":1,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":2,"total":10,"G1":false,"G2":false,"pass":true,"notes":[
+"C4: several cases have no checkable result, e.g. TC-B06 'Result depends on OQ-4. Record actual', TC-B09 'Per OQ-7. Record actual', TC-B12 'Expiry evaluated in the time zone defined by OQ-4'.",
+"C5: all three open questions raised (Q2 VAT/shipping, Q4 time zone, Q13 messages), but the message question is answered in expected results: TC-B02 'Rejected with a message that the minimum order is 50 EUR', TC-N02 'an \"expired\" message'.",
+"G1 not triggered: trimming only hedged (TC-B09 'ideally trimmed'), single-use and max discount left as open questions; TC-N12 'validation uses server time' is about clock trust and the time zone is still deferred to OQ-4."]},
+{"run":2,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":1,"total":9,"G1":false,"G2":false,"pass":false,"notes":[
+"C4: some results not checkable: TC-19 'Undefined by requirement (OQ6)... Record actual behaviour', TC-23 'Expiry evaluated in the single defined time zone (OQ4)'.",
+"C5: all three open questions raised (OQ1, OQ4, OQ10), but message answered as fact: TC-08 'clear message that the minimum order is 50 EUR', TC-10 'an \"expired\" message', TC-12 'an \"invalid code\" message'.",
+"C6: data or steps missing in several cases: TC-05/TC-06 'Cart 50+ EUR', TC-12 to TC-14 and TC-18 to TC-20 have no cart total, TC-22 and TC-23 have no steps.",
+"Total 9 is below 10."]},
+{"run":3,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":2,"total":10,"G1":true,"G2":false,"pass":false,"notes":[
+"C4: some results not checkable: TC-20 'Depends on whether the threshold is checked on the rounded or unrounded amount', TC-22 'Depends on Q2', TC-27 'Per Q2'.",
+"C5: all three open questions raised (Q1, Q2, Q3), but message answered as fact in TC-10 'Rejected with an \"expired\" message' and TC-12 'an \"invalid code\" message' (only TC-09 is tagged [OQ]).",
+"G1: TC-18 states as fact 'Validity is re-checked at order placement', which the requirement does not say and the answer itself lists as open question Q11.",
+"v1.1 G1: kept. TC-18 'Validity is re-checked at order placement' is a behaviour about what the system does next, not a same-standard equivalence; the v1.1 exclusion does not apply. Other candidates (TC-26 'most likely trimmed', TC-15 replace/block options) are hedged or tagged [OQ]."]}
+],"case_pass":false}

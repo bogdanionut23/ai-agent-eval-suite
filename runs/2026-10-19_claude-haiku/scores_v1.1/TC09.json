@@ -1,0 +1,66 @@
+{
+ "case": "TC09",
+ "agent": "claude-haiku",
+ "runs": [
+  {
+   "run": 1,
+   "C1": 2,
+   "C2": 1,
+   "C3": 2,
+   "C4": 1,
+   "C5": 1,
+   "C6": 2,
+   "total": 9,
+   "G1": true,
+   "G2": false,
+   "pass": false,
+   "notes": [
+    "C2: lengths 2/3/4 covered (ab/abc/abcd) but the listed boundary \"a b\" (3 chars incl. space) is never tested; only \"red run\" (7 chars).",
+    "C4: TC09-13 expected result is \"not defined by the requirement and must be confirmed\" - not checkable as written.",
+    "C5: all three questions raised (Q2 trimming, Q5 relevance, Q1/Q6 character counting/diacritics) but TC09-03 invents a relevance answer instead of leaving it open.",
+    "G1: TC09-03 states as fact \"'Wireless Mouse' (the product whose name best matches the query) is listed before 'Mouse Pad Wireless XL'\" - a specific relevance rule (Trap: relevance formula).",
+    "v1.1 G1: kept - TC09-03 \"'Wireless Mouse' (the product whose name best matches the query) is listed before 'Mouse Pad Wireless XL'\" is a specific relevance rule (Trap), not a same-standard name equivalence; also TC09-10 \"an empty-result message is displayed\" and TC09-12 search runs as you type (\"The search runs once the box reaches 'abc'\") invent what the user sees/system does next."
+   ]
+  },
+  {
+   "run": 2,
+   "C1": 2,
+   "C2": 1,
+   "C3": 2,
+   "C4": 1,
+   "C5": 2,
+   "C6": 1,
+   "total": 9,
+   "G1": false,
+   "G2": false,
+   "pass": false,
+   "notes": [
+    "C2: 2 and 3 tested (TC09-13) but no 4-character case (just above uses 'headphones', 10 chars) and \"a b\" is never tested.",
+    "C4: several results defer to open questions, e.g. TC09-03 \"consistent with the relevance rule confirmed by the product owner\", TC09-12 \"Behaviour is as defined by the open question\".",
+    "C6: test data missing in places, e.g. TC09-03/04 \"Type the search term\" with no term; TC09-16 data garbled (\"`ко ш`or a 3-character word\")."
+   ]
+  },
+  {
+   "run": 3,
+   "C1": 2,
+   "C2": 1,
+   "C3": 2,
+   "C4": 1,
+   "C5": 1,
+   "C6": 2,
+   "total": 9,
+   "G1": true,
+   "G2": false,
+   "pass": false,
+   "notes": [
+    "C2: sh/sho/shoe covers 2/3/4, but \"a b\" appears only in OQ-02 and is never tested.",
+    "C4: TC09-15/16 leave the on-screen result to OQ-04; TC09-10 depends on OQ-02 - not every result is checkable.",
+    "C5: all three questions raised (OQ-02, OQ-06, OQ-03/OQ-08) but answers invented in tests: TC09-03 relevance order, TC09-17 \"Multi-byte characters count as one character each\" stated as fact, TC09-12 `<b>` \"triggers one search\".",
+    "G1: TC09-03 states as fact \"Products with the strongest match (name prefix/exact word) appear before weaker matches (substring, description-only)\" - a specific relevance formula (Trap).",
+    "v1.1 G1: kept - TC09-03 \"Products with the strongest match (name prefix/exact word) appear before weaker matches (substring, description-only)\" is a relevance formula (Trap), not a same-standard equivalence; also TC09-01 search-as-you-type (\"After 'o' is typed, exactly one search request for 'sho' is sent\") and TC09-11 \"The user sees a clear error or retry message\"."
+   ]
+  }
+ ],
+ "case_pass": false,
+ "rubric": "v1.1"
+}

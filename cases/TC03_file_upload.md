@@ -21,4 +21,6 @@ Users can upload a profile picture. Allowed formats are JPG and PNG. The maximum
 ## Traps (gate G1 if stated as fact)
 - automatic resizing or cropping
 - minimum image dimensions
-- JPEG with extension .jpeg (not stated either way: must be a question, not an assumption)
+
+## Not a trap (changed in rubric v1.1)
+- Accepting .jpeg as JPG: same JPEG format, so stating it as fact is allowed. Asking about it is also fine.

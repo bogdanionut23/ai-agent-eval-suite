@@ -1,0 +1,17 @@
+{"case":"TC03","agent":"claude-sonnet","rubric":"v1.1","runs":[
+{"run":1,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":2,"total":10,"G1":true,"G2":false,"pass":false,"notes":[
+"G1: trap stated as fact in TC-PP-003 expected result: '.jpeg ... Accepted, because JPEG and JPG are the same format' (OQ-3 reference does not make it conditional).",
+"C4: several expected results are not checkable: TC-PP-028/031 'Behaviour recorded', TC-PP-017 'Accepted, or rejected ... Record the actual behaviour'.",
+"C5: all three questions raised, but answers invented elsewhere: .jpeg accepted (TC-PP-003), replacement asserted in TC-PP-006 'Picture B is shown', content validation asserted in TC-PP-026 'Rejected, because the content is not a real JPEG', case-insensitivity asserted in TC-PP-008.",
+"v1.1 G1: kept. The .jpeg item (TC-PP-003) is no longer G1, but other invented behaviour remains: TC-PP-026 'Rejected, because the content is not a real JPEG. The file is not stored or served' (content check and storage not in requirement), TC-PP-006 'Picture B is shown ... Picture A is no longer shown' (replacement, its own OQ-9), TC-PP-008 'extension check is case-insensitive' (system behaviour, not a same-standard name equivalence)."]},
+{"run":2,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":2,"total":10,"G1":true,"G2":false,"pass":false,"notes":[
+"G1: TC-04 states as fact 'extension matching is case-insensitive', behaviour not in the requirement and which the answer itself lists as open in OQ-3.",
+"C4: TC-09 'Record the observed behavior', TC-13/14/25 'Behavior follows OQ-x' are not checkable results.",
+"C5: all three questions raised, but TC-12 asserts '(content or MIME type is validated, not only the extension)' and TC-23 asserts replacement 'Picture B is shown' as the expected result.",
+"v1.1 G1: kept. The v1 G1 does not concern .jpeg (the answer leaves .jpeg open in OQ-3). Invented behaviour remains: TC-04 'extension matching is case-insensitive', TC-12 'content or MIME type is validated ... No file is stored', TC-23 'Picture B is shown. Picture A is no longer shown'."]},
+{"run":3,"C1":2,"C2":2,"C3":2,"C4":1,"C5":1,"C6":2,"total":10,"G1":true,"G2":false,"pass":false,"notes":[
+"G1: invented behaviour stated as fact without an OQ tag: TC-DP-006 'Progress/success indicator shown' (the answer itself asks this in OQ 9), TC-DP-008 'image has alt text'.",
+"C4: TC-BD-007 'Behaviour per dimension rules', TC-NG-005 'Behaviour per rules', TC-NG-004 'Defined behaviour' are not checkable.",
+"C5: all three questions raised, but TC-NG-003 asserts 'content validated, not only extension' and TC-DP-006 answers its own OQ 9.",
+"v1.1 G1: kept. The v1 G1 does not concern .jpeg (TC-PP-004 is conditional, 'Blocked by OQ 3'). Invented behaviour remains: TC-DP-006 'Progress/success indicator shown', TC-DP-008 'image has alt text', TC-NG-003 'content validated, not only extension. No file stored'."]}
+],"case_pass":false}
