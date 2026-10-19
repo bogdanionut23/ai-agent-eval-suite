@@ -15,7 +15,7 @@ This repository is a small, fixed evaluation suite for one job: an AI agent that
 
 | Item | State |
 |---|---|
-| Rubric | v1 written |
+| Rubric | v1.1 (after human calibration) |
 | Cases | 15 of 15–20 |
 | First baseline run | done 2026-10-19: Sonnet 5/15 cases, Haiku 3/15 ([details](runs/2026-10-19_baseline.md)) |
 | Human calibration | round 1 done 2026-10-19: 2 of 3 G1 verdicts confirmed, rubric v1.1, results unchanged ([details](runs/2026-10-19_baseline.md#human-calibration-and-rubric-v11-2026-10-19-same-evening)) |
