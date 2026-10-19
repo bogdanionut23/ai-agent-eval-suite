@@ -4,6 +4,8 @@ How do you know an AI agent is good enough to hand to a client? You decide **bef
 
 This repository is a small, fixed evaluation suite for one job: an AI agent that turns a written requirement into test cases. It is tool-neutral: the same cases and rubric work for Claude, ChatGPT, Codex, Microsoft Copilot or any other agent.
 
+Write-up of the first run: [Same AI, different answers: why one run of an AI agent lies](https://bogdanionut23.substack.com/p/same-ai-different-answers-why-one) (Substack).
+
 ## The method
 
 1. **Rubric first.** The scoring rules in [RUBRIC.md](RUBRIC.md) were written before any agent was run. Nothing is tuned after seeing results.
