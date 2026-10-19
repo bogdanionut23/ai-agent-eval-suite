@@ -16,7 +16,7 @@ This repository is a small, fixed evaluation suite for one job: an AI agent that
 | Item | State |
 |---|---|
 | Rubric | v1 written |
-| Cases | 5 of 15–20 |
+| Cases | 15 of 15–20 |
 | First baseline run | not yet |
 
 ## How a run works
